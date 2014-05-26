@@ -49,4 +49,9 @@ class PhotosController < ApplicationController
 
     redirect_to "/photos", :notice => "Photo deleted."
   end
+
+  def wall
+    @wall = current_user.photos
+  end
+
 end
